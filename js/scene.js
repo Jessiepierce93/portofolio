@@ -34,7 +34,7 @@
     particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
     const particleMat = new THREE.PointsMaterial({
-        color: 0xe2f04b,
+        color: 0x2dd4bf,
         size: 0.18,
         transparent: true,
         opacity: 0.6,
@@ -48,7 +48,7 @@
     /* ---------- Central accent shape (subtle) ---------- */
     const shapeGeo = new THREE.IcosahedronGeometry(6, 1);
     const shapeMat = new THREE.MeshBasicMaterial({
-        color: 0xe2f04b,
+        color: 0x2dd4bf,
         wireframe: true,
         transparent: true,
         opacity: 0.12,
