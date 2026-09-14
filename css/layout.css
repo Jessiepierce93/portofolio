@@ -163,6 +163,50 @@ main { position: relative; z-index: 1; }
 .work-meta h3 { font-size: 1.2rem; }
 .work-meta p { color: var(--fg-dim); font-size: 0.85rem; margin-top: 0.2rem; }
 
+/* ---------- Work audio: play button & playing state ---------- */
+.work-item { position: relative; }
+.work-play {
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 2;
+    transition: background 0.3s, border-color 0.3s, transform 0.3s var(--ease);
+}
+.work-play::before {
+    content: '';
+    width: 0; height: 0;
+    border-left: 12px solid #fff;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin-left: 3px;
+    transition: border-color 0.2s;
+}
+.work-item.is-playing .work-play {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+.work-item.is-playing .work-play::before {
+    border-left-color: var(--bg);
+    width: 10px; height: 12px;
+    border: 0;
+    background: var(--bg);
+    margin-left: 0;
+    box-shadow: inset 4px 0 0 0 var(--bg), inset 8px 0 0 0 var(--bg);
+}
+.work-play:hover { transform: scale(1.12); border-color: var(--accent); }
+
+/* Ring pulse while playing */
+.work-item.is-playing .work-media { border-color: var(--accent); }
+.work-item.is-playing .work-media span { animation: pulseText 1.4s infinite ease-in-out; }
+@keyframes pulseText { 0%,100% { opacity: 1; } 50% { opacity: 0.45; } }
+
 /* ---------- Capabilities list ---------- */
 .cap-list { border-top: 1px solid #222; }
 .cap-list li {

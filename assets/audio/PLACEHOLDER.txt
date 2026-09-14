@@ -1,0 +1,8 @@
+Isi folder ini dengan 3 file MP3 karya (nama persis sesuai ini):
+
+1. Isolated.mp3                 -> untuk karya Absence Of Mercy
+2. Friendship - We Are Rising.mp3 -> untuk karya We Are Rising
+3. Paralisis.mp3                -> untuk karya Peluru Kendali
+
+setelah file diletakkan di sini, buka gallery di website — audio akan taudah memutar saat kursor di atas karya,
+dan tombol play/pause bisa di-klik untuk toggle manual.
